@@ -1,0 +1,117 @@
+.HeaderDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  box-sizing: border-box;   
+  border-bottom: 1px solid rgb(247, 221, 221);
+  border-radius: 5px;
+position: sticky;
+overflow: hidden;
+
+}
+
+.LogoDiv img  {
+  width: 70px;
+}
+.nav_items ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 40px;
+  font-family: Poppins;
+}
+.nav_items ul{
+  font-weight: 500;
+}
+.nav_items ul li:hover{
+  color: rgb(255, 132, 0);
+  font-size: 17px;
+
+}
+.nav_items ul li{
+  cursor: pointer;
+  text-decoration: none;
+
+}
+.resDiv{
+  width:230px ;
+  padding: 5px;
+  margin: 10px;
+  border: 2px solid #cdd2d6;
+  border-radius: 7px;
+}
+.resDiv:hover {
+  border: 3px solid #a7a1a1;
+  cursor: pointer;
+}
+
+.res_1{
+  padding: 3px;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.resDiv h3 {
+   font-size: large;
+   font-weight: 600;
+   text-decoration: none;
+} 
+.resDiv h4{
+  font-weight: 500;
+}
+.Search{
+  margin: 5px 50px;
+}
+.res_Container{
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0px 100px;
+} 
+
+.input_container{
+  padding: 10px;
+  width: 700px;
+  border: 3px solid rgb(107, 107, 107);
+  border-radius: 5px;
+  margin-left: 69px;
+ 
+
+}
+.fa-magnifying-glass{
+  position: relative;
+  right: 45px;
+}
+.login_btn{
+  padding: 3px;
+  background-color: rgb(255, 139, 56);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+.SearchBtn{
+  height: 40px;
+  margin-left: 20px;
+  
+  font-size: 14px;
+  background-color: rgb(255, 139, 56);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+
+  
+}
+.Underline{
+  text-decoration: none;
+  color: black;
+}
+.userCard{
+  border: 1px solid rgb(227, 227, 227) 
+  ;
+  margin: 60px 190px;
+
+}
