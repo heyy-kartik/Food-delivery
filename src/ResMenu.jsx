@@ -8,7 +8,7 @@ const ResMenu = () => {
 
   useEffect(() => {
     fetchMenu();
-  }, []);
+  });
 
   const fetchMenu = async () => {
     try {
@@ -22,7 +22,7 @@ const ResMenu = () => {
     }
   };
 
-  if (!resState) return <h1>Loading...</h1>;
+  if (!resState) return <h1></h1>;
 
   const restaurantInfo = resState?.cards?.[2]?.card?.card?.info;
   const itemCards =

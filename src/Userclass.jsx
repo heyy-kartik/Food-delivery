@@ -29,7 +29,7 @@ class Userclass extends React.Component {
     // const { name, location } = this.props;
     return (
       <div className="userCard">
-        <img src={avatar_url}></img>
+        <img src={avatar_url} className="avatar_edit"></img>
         <h3> Name : {name}</h3>
         <h3> Location : {location}</h3>
         <h4> Contact : kartikjagdale0511@gmail.com</h4>

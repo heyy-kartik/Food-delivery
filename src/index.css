@@ -109,8 +109,13 @@
   color: black;
 }
 .userCard{
-  border: 1px solid rgb(227, 227, 227) 
-  ;
+  border: 1px solid rgb(227, 227, 227)  ;
   margin: 60px 190px;
-
+}
+.avatar_edit{
+  width: 30px;
+ align-items: center;
+ align-content: center;
+  border-radius: 5px;
+  margin-left: 110px;
 }
