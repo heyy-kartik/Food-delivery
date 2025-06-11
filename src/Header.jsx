@@ -2,8 +2,12 @@ import React from "react";
 import "./index.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "./Utillities/useOnlineStatus";
+
 const Header = () => {
   const [btnName, setbtnName] = useState("Login");
+  const OnlineStatus = useOnlineStatus();
+
   return (
     <>
       <div className="HeaderDiv" style={{ position: "sticky" }}>
@@ -12,6 +16,7 @@ const Header = () => {
         </div>
         <div className="nav_items">
           <ul>
+            <li>Status : {OnlineStatus ? "Online ✅" : "Offline ❌"}</li>
             <li>
               <Link className="Underline" to={"/"}>
                 Home

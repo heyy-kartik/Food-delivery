@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ResCard from "./ResCard";
-
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -46,7 +45,7 @@ const Body = () => {
           .toLowerCase()
           .includes(searchText.toLowerCase())
     );
-    setFilteredRestaurants(filtered);
+    setFilteredRestaurants(filtered);``
   };
 
   return (
