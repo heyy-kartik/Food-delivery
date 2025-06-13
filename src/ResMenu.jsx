@@ -36,7 +36,8 @@ const ResMenu = () => {
       ?.card?.itemCards;
   console.log(itemCards);
   if (!restaurantInfo || !itemCards)
-    return <h1 className="NoWorking">Data is not Loading</h1>;
+    return <h1 className="NoWorking">Data is not Loading</h1>
+   ;
   const { name, cuisines = [], costForTwoMessage } = restaurantInfo;
 
   return (
@@ -48,10 +49,10 @@ const ResMenu = () => {
         <h3 style={{ fontWeight: "500", margin: "10px" }}>Recommended</h3>
         <ul style={{ margin: 10 }}>
           {itemCards.map((item) => {
-            if (!item?.card?.info?.id) return null; // skip incomplete items
+            if (!item?.card?.info?.id )  return null; // skip incomplete items
             return (
               <li key={item.card.info.id}>
-                {item.card.info.name} - Rs.{(item.card.info.price ?? 0) / 100}
+                {item.card.info.name } - Rs.{(item.card.info.price ?? 0) / 100}
               </li>
             );
           })}
