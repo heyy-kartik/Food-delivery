@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const ResCard = ({ resName, cuisines, avgrating, Imgurl, SlaTime, resId }) => {
@@ -10,9 +9,17 @@ const ResCard = ({ resName, cuisines, avgrating, Imgurl, SlaTime, resId }) => {
           <img
             src={Imgurl}
             alt="Restaurant"
-            style={{ width: "100%", height: "200px", borderRadius: "10px" }}
+            style={{
+              width: "100%",
+              height: "200px",
+              borderRadius: "10px",
+              paddingTop: "5px",
+            }}
           />
-          <h3 style={{ color: "black", fontSize: "15px" }}> {resName} </h3>
+          <h3 style={{ color: "black", fontSize: "15px", padding: "5px" }}>
+            {" "}
+            {resName}{" "}
+          </h3>
           <h4 style={{ color: "black", fontSize: "13px" }}> {cuisines}</h4>
           <span
             style={{

@@ -7,10 +7,10 @@ import useOnlineStatus from "./Utillities/useOnlineStatus";
 const Header = () => {
   const [btnName, setbtnName] = useState("Login");
   const OnlineStatus = useOnlineStatus();
-
+  
   return (
     <>
-      <div className="HeaderDiv" style={{ position: "sticky" }}>
+      <div className="HeaderDiv" style={{ position: "relative" }}>
         <div className="LogoDiv">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2iujphOsVMtakrSKi8xXYFwRkWo7XnC0OTA&s"></img>
         </div>

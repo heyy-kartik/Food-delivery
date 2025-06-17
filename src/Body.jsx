@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ResCard from "./ResCard";
+
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -45,21 +46,27 @@ const Body = () => {
           .toLowerCase()
           .includes(searchText.toLowerCase())
     );
-    setFilteredRestaurants(filtered);``
+    setFilteredRestaurants(filtered);
+    ``;
   };
 
   return (
     <div className="Body">
-      <div className="Search">
+      <div className="Search ">
         <input
           type="text"
           className="input_container"
-          placeholder="Search Restaurants"
+          class="p-[50px] gap-1 h-[35px] w-[800px] border-b-neutral-500 ml-[65px] rounded-lg after:ml-0.5 text-gray-600 after:text-red-500 after:content-['*']"
+          placeholder="  Search Restaurants"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           onClick={handleSearch}
         />
-        <button className="SearchBtn" onClick={handleSearch}>
+        <span /> <span />
+        <button
+          class="hover:bg-gray-900 hover:text-amber-50 text-[15px] cursor-pointer border border-black rounded-sm h-9 bg-orange-400  "
+          onClick={handleSearch}
+        >
           Search
         </button>
       </div>
