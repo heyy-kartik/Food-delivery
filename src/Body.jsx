@@ -26,7 +26,7 @@ const Body = () => {
         )?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
       console.log(restaurantData);
-
+      console.log(allRestaurants);
       setAllRestaurants(restaurantData);
       setFilteredRestaurants(restaurantData);
 

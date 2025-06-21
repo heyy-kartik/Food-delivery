@@ -3,6 +3,7 @@ import { ShimmerSectionHeader } from "react-shimmer-effects";
 import { ShimmerPostList } from "react-shimmer-effects";
 import { useParams } from "react-router-dom";
 import MENU_API_URL from "./Utillities/constats";
+import Accrodion from "./Accrodion";
 
 const ResMenu = () => {
   const [resState, setresState] = useState(null);
@@ -34,32 +35,38 @@ const ResMenu = () => {
   const itemCards =
     resState?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card
       ?.card?.itemCards;
+
   console.log(itemCards);
+  console.log(resState?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+
+  const categories =
+    resState?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+      (c) =>
+        c.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+
+  console.log(categories);
   if (!restaurantInfo || !itemCards)
-    return <h1 className="NoWorking">Data is not Loading</h1>
-   ;
+    return <h1 className="NoWorking">Data is not Loading</h1>;
   const { name, cuisines = [], costForTwoMessage } = restaurantInfo;
 
   return (
     <>
       <div className="menu">
-        <h1 style={{ fontWeight: "500", margin: "10px" }}>{name}</h1>
+        <h1 className="text-center font-medium p-1.5 ">{name}</h1>
 
         <h2 style={{ fontWeight: "500", margin: "10px" }}>Menu</h2>
-        <h3 style={{ fontWeight: "500", margin: "10px" }}>Recommended</h3>
-        <ul style={{ margin: 10 }}>
-          {itemCards.map((item) => {
-            if (!item?.card?.info?.id )  return null; // skip incomplete items
-            return (
-              <li key={item.card.info.id}>
-                {item.card.info.name } - Rs.{(item.card.info.price ?? 0) / 100}
-              </li>
-            );
-          })}
-        </ul>
+
         <p>
-          {cuisines.join(", ")} - {costForTwoMessage}
+          {cuisines.join(",")} - {costForTwoMessage}
         </p>
+        {categories.map((category) => (
+          <Accrodion
+            key={category.card.card.title.itemCards}
+            data={category.card.card}
+          />
+        ))}
       </div>
     </>
   );
