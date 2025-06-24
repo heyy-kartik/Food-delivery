@@ -49,7 +49,7 @@ const ResMenu = () => {
   console.log(categories);
   if (!restaurantInfo || !itemCards)
     return <h1 className="NoWorking">Data is not Loading</h1>;
-  const { name, cuisines = [], costForTwoMessage } = restaurantInfo;
+  const { name } = restaurantInfo;
 
   return (
     <>
@@ -58,9 +58,6 @@ const ResMenu = () => {
 
         <h2 style={{ fontWeight: "500", margin: "10px" }}>Menu</h2>
 
-        <p>
-          {cuisines.join(",")} - {costForTwoMessage}
-        </p>
         {categories.map((category) => (
           <Accrodion
             key={category.card.card.title.itemCards}
