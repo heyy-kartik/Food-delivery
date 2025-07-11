@@ -26,7 +26,7 @@ const Body = () => {
         )?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
       console.log(restaurantData);
-      console.log(allRestaurants);
+
       setAllRestaurants(restaurantData);
       setFilteredRestaurants(restaurantData);
 
@@ -47,26 +47,20 @@ const Body = () => {
           .includes(searchText.toLowerCase())
     );
     setFilteredRestaurants(filtered);
-    ``;
   };
 
   return (
     <div className="Body">
-      <div className="Search ">
+      <div className="Search">
         <input
           type="text"
           className="input_container"
-          class="p-[50px] gap-1 h-[35px] w-[800px] border-b-neutral-500 ml-[65px] rounded-lg after:ml-0.5 text-gray-600 after:text-red-500 after:content-['*']"
-          placeholder="  Search Restaurants"
+          placeholder="Search Restaurants"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           onClick={handleSearch}
         />
-        <span /> <span />
-        <button
-          class="hover:bg-gray-900 hover:text-amber-50 text-[15px] cursor-pointer border border-black rounded-sm h-9 bg-orange-400  "
-          onClick={handleSearch}
-        >
+        <button className="SearchBtn" onClick={handleSearch}>
           Search
         </button>
       </div>

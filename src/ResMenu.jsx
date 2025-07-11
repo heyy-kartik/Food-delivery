@@ -54,9 +54,14 @@ const ResMenu = () => {
   return (
     <>
       <div className="menu">
-        <h1 className="text-center font-medium p-1.5 ">{name}</h1>
+        <h1 className="text-center  p-1.5 font-semibold text-2xl">{name}</h1>
 
-        <h2 style={{ fontWeight: "500", margin: "10px" }}>Menu</h2>
+        <h2
+          className="text-center font-semibold text-lg "
+          style={{ fontWeight: "500", margin: "10px" }}
+        >
+          ⚡Menu
+        </h2>
 
         {categories.map((category) => (
           <Accrodion

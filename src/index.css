@@ -28,7 +28,7 @@
   font-weight: 500;
 }
 .nav_items ul li:hover{
-  color: rgb(255, 132, 0);
+  
   font-size: 17px;
 
 }
@@ -89,7 +89,7 @@
 }
 .login_btn{
   padding: 3px;
-  background-color: rgb(255, 139, 56);
+  background-color: rgb(228, 93, 55);
   border-radius: 6px;
   font-weight: 500;
   font-size: 14px;

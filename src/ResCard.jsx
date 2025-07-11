@@ -17,8 +17,7 @@ const ResCard = ({ resName, cuisines, avgrating, Imgurl, SlaTime, resId }) => {
             }}
           />
           <h3 style={{ color: "black", fontSize: "15px", padding: "5px" }}>
-            {" "}
-            {resName}{" "}
+            {resName}
           </h3>
           <h4 style={{ color: "black", fontSize: "13px" }}> {cuisines}</h4>
           <span

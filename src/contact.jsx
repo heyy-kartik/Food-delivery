@@ -7,7 +7,7 @@ const Contact = () => {
         Hello I'm Contact us page
       </h3>
     </div>
-  );
+  );  
 };
 
 export default Contact;

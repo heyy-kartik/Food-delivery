@@ -1,13 +1,15 @@
 import React from "react";
 import "./index.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./Utillities/useOnlineStatus";
-
+import UserContext from "./Utillities/UserContext";
+import LocationHeader from "./locationHeader.jsx";
 const Header = () => {
   const [btnName, setbtnName] = useState("Login");
   const OnlineStatus = useOnlineStatus();
-  
+  const { loggedInUser } = useContext(UserContext);
+  console.log(loggedInUser);
   return (
     <>
       <div className="HeaderDiv" style={{ position: "relative" }}>
@@ -49,7 +51,12 @@ const Header = () => {
                 className="login_btn"
               >
                 {btnName}
-              </button>{" "}
+              </button>
+            </li>
+            <li>{loggedInUser}</li>
+            <li>
+              {" "}
+              <LocationHeader />{" "}
             </li>
           </ul>
         </div>
