@@ -51,7 +51,7 @@ const Body = () => {
 
   return (
     <div className="Body">
-      <div className="Search">
+      <div className="Search gap-2 items-center px-5 py-3 m-4 flex ">
         <input
           type="text"
           className="input_container"
@@ -60,7 +60,7 @@ const Body = () => {
           onChange={(e) => setSearchText(e.target.value)}
           onClick={handleSearch}
         />
-        <button className="SearchBtn" onClick={handleSearch}>
+        <button className="SearchBtn p-3" onClick={handleSearch}>
           Search
         </button>
       </div>
