@@ -51,7 +51,7 @@ const Body = () => {
 
   return (
     <div className="Body">
-      <div className="Search gap-2 items-center px-5 py-3 m-4 flex ">
+      <div className="Search gap-6 items-center px-5 py-3 m-4 flex ">
         <input
           type="text"
           className="input_container"
@@ -60,7 +60,10 @@ const Body = () => {
           onChange={(e) => setSearchText(e.target.value)}
           onClick={handleSearch}
         />
-        <button className="SearchBtn p-3" onClick={handleSearch}>
+        <button
+          className="bg-gray-100  w-[120px] h-[40px] border-indigo-300 rounded-lg  hover:bg-black hover:text-white transition-colors duration-300 text-center text-lg font-medium"
+          onClick={handleSearch}
+        >
           Search
         </button>
       </div>

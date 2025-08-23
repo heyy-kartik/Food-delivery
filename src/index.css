@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-
+:root {
+  --brand: oklch(98.5% 0.001 106.423);
+}
 
 .HeaderDiv{
   display: flex;
